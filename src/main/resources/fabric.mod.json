@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "ender_tweeks",
+	"version": "${version}",
+	"name": "Ender Tweeks",
+	"description": "Utility client mod: flight, combat helpers, ESP, anchor macros and more. Press Right Ctrl in game.",
+	"authors": ["You"],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["com.endertweeks.EnderTweeksClient"]
+	},
+	"mixins": [
+		{
+			"config": "ender_tweeks.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

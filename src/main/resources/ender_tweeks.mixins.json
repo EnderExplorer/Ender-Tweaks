@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.endertweeks.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"XrayBlockMixin",
+		"XrayStateMixin",
+		"AbstractContainerScreenAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
