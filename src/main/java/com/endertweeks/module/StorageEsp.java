@@ -11,7 +11,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.ChunkPos;
-import net.minecraft.world.level.chunk.ChunkAccess;
+import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -56,9 +56,9 @@ public class StorageEsp extends Feature {
 		int r = mc.options.getEffectiveRenderDistance();
 		for (int dx = -r; dx <= r; dx++) {
 			for (int dz = -r; dz <= r; dz++) {
-				ChunkAccess chunk = mc.level.getChunkSource().getChunk(cp.x + dx, cp.z + dz, ChunkStatus.FULL, false);
-				if (chunk == null) continue;
-				for (BlockEntity be : chunk.getBlockEntities().values()) {
+				LevelChunk chunk = mc.level.getChunkSource().getChunk(cp.x + dx, cp.z + dz, ChunkStatus.FULL, false);
+if (chunk == null) continue;
+for (BlockEntity be : chunk.getBlockEntities().values()) {
 					int color = colorFor(be.getBlockState().getBlock());
 					if (color == 0) continue;
 					blocks.add(new Target(new AABB(be.getBlockPos()), color));
